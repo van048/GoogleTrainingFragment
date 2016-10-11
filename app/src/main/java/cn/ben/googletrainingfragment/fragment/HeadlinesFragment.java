@@ -13,18 +13,17 @@ import cn.ben.googletrainingfragment.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ArticleFragment.OnFragmentInteractionListener} interface
+ * {@link HeadlinesFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ArticleFragment#newInstance} factory method to
+ * Use the {@link HeadlinesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-@SuppressWarnings({"unused", "FieldCanBeLocal"})
-public class ArticleFragment extends Fragment {
+@SuppressWarnings({"FieldCanBeLocal", "unused"})
+public class HeadlinesFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    public static final String ARG_POSITION = "position";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -32,7 +31,7 @@ public class ArticleFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ArticleFragment() {
+    public HeadlinesFragment() {
         // Required empty public constructor
     }
 
@@ -42,11 +41,11 @@ public class ArticleFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ArticleFragment.
+     * @return A new instance of fragment HeadlinesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ArticleFragment newInstance(String param1, String param2) {
-        ArticleFragment fragment = new ArticleFragment();
+    public static HeadlinesFragment newInstance(String param1, String param2) {
+        HeadlinesFragment fragment = new HeadlinesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,7 +66,7 @@ public class ArticleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_article, container, false);
+        return inflater.inflate(R.layout.fragment_headlines, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -107,6 +106,6 @@ public class ArticleFragment extends Fragment {
     @SuppressWarnings("EmptyMethod")
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(@SuppressWarnings("UnusedParameters") Uri uri);
     }
 }
